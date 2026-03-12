@@ -145,7 +145,7 @@ public class EmpServiceImpl implements EmpService {
 
         //2. 判断员工是否存在
         if (e != null) {
-            log.info("登录成功, 员工信息: ()");
+            log.info("登录成功, 员工信息: ");
             //生成JWT令牌
             Map<String, Object> claims = new HashMap<>();
             claims.put("id", e.getId());

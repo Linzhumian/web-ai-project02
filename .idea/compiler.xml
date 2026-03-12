@@ -8,17 +8,27 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../software/apache-maven-3.9.12-bin/apache-maven-3.9.12/mvn-repo/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.9.12-bin/apache-maven-3.9.12/mvn-repo/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
         <module name="tlias-web-management" />
       </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-aop-quickstart" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="25">
+      <module name="tlias-web-management (1)" target="17" />
       <module name="web-ai-project02" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-aop-quickstart" options="-parameters" />
       <module name="tlias-web-management" options="-parameters" />
+      <module name="tlias-web-management (1)" options="-parameters" />
       <module name="web-ai-project02" options="-parameters" />
     </option>
   </component>
