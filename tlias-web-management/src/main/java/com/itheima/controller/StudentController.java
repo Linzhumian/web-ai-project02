@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.itheima.anno.LogOperation;
 import com.itheima.pojo.PageResult;
 import com.itheima.pojo.Result;
 import com.itheima.pojo.Student;
@@ -29,6 +30,7 @@ public class StudentController {
 
 
     //批量删除学员
+    @LogOperation
     @DeleteMapping("/{ids}")
     public Result delete(@PathVariable List<Integer> ids){
         log.info("所要删除员工的ID{}", ids);
@@ -37,6 +39,7 @@ public class StudentController {
     }
 
     //添加学员
+    @LogOperation
     @PostMapping
     public Result save(@RequestBody Student student){
         log.info("保存学员信息{}", student);
@@ -54,6 +57,7 @@ public class StudentController {
 
 
     //修改学员信息
+    @LogOperation
     @PutMapping
     public Result update(@RequestBody Student student){
         log.info("修改学员信息{}", student);
@@ -62,6 +66,7 @@ public class StudentController {
     }
 
     //违纪处理
+    @LogOperation
     @PutMapping("/violation/{id}/{score}")
     public Result handleDiscipline(@PathVariable Integer id, @PathVariable Integer score){
         log.info("处理违纪信息{}, {}", id, score);

@@ -10,11 +10,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  *配置类
  */
-@Configuration
+/*@Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    /*@Autowired
-    private DemoInterceptor demoInterceptor;*/
+    *//*@Autowired
+    private DemoInterceptor demoInterceptor;*//*
 
     @Autowired
     private TokenInterceptor tokenInterceptor;
@@ -24,4 +24,4 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(tokenInterceptor).addPathPatterns("/**")   // 拦截所有请求
                 .excludePathPatterns("/login");   // 不拦截请求
     }
-}
+}*/
